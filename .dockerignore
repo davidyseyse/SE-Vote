@@ -1,0 +1,14 @@
+.git
+.github
+.idea
+.vscode
+**/node_modules
+**/dist
+**/target
+**/application.yaml
+**/.env
+**/.env.*
+apps/backend-output
+output
+config
+*.log

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_DB: isslab
+      POSTGRES_USER: ${POSTGRES_USER:-isslab}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD before starting Docker Compose}
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
